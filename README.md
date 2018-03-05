@@ -8,7 +8,7 @@ Usage is almost exactly the same as the Python version, but with JavaScript synt
 An example: 
 
 ```javascript
-    const TeapotTools = require('teapot-tools');
+    const TeapotTools = require('teapot-toolsjs');
     let tt = new TeapotTools();
 
     tt.rotate(180); // Rotate the teapot to 180 degrees
