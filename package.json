@@ -1,0 +1,29 @@
+{
+  "name": "teapot-toolsjs",
+  "version": "1.0.0",
+  "description": "JavaScript version of the Python3 module of the same name",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --reporter spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Teapot-Tools/teapot-toolsjs.git"
+  },
+  "keywords": [
+    "teapot"
+  ],
+  "author": "MikeModder <oddman56@protonmail.com> (http://github.com/MikeModder)",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/Teapot-Tools/teapot-toolsjs/issues"
+  },
+  "homepage": "https://github.com/Teapot-Tools/teapot-toolsjs#readme",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.0.1"
+  },
+  "dependencies": {
+    "selenium-webdriver": "^4.0.0-alpha.1"
+  }
+}
