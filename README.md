@@ -1,5 +1,5 @@
 # teapot-toolsjs
-This is a JavaScript port of the [Python3 modules](https://github.com/DismissedGuy/teapot-tools) of the same name.
+This is a JavaScript port of the [Python3 module](https://github.com/DismissedGuy/teapot-tools) of the same name.
 
 In order to use this, you must have the geckodriver in your path. Currently, it is only tested with Firefox (Gecko). More browser support will come later.
 
