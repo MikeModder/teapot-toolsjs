@@ -57,3 +57,8 @@ typings/
 # dotenv environment variables file
 .env
 
+# Drivers
+*driver*
+
+# JSDoc Output
+out/
