@@ -1,6 +1,6 @@
 {
   "name": "teapot-toolsjs",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "JavaScript version of the Python3 module of the same name",
   "main": "index.js",
   "scripts": {
@@ -14,7 +14,7 @@
     "teapot"
   ],
   "author": "MikeModder <oddman56@protonmail.com> (http://github.com/MikeModder)",
-  "license": "GPL-3.0",
+  "license": "GPL-3.0-only",
   "bugs": {
     "url": "https://github.com/Teapot-Tools/teapot-toolsjs/issues"
   },
