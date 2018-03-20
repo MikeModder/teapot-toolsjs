@@ -10,9 +10,18 @@ const {Builder, By, until} = require('selenium-webdriver');
 class TeapotTools {
     /** 
      * Create a new instance of TeapotTools.
+     * @param {String} browser What browser to use. (chrome, firefox, internet explorer, opera).
     */
-    constructor(){
-        this.driver = new Builder().forBrowser('firefox').build();
+    constructor(browser){
+        const browsers = [
+            'chrome',
+            'firefox',
+            'internet explorer',
+            'opera'
+        ];
+        if(browsers.filter(b => b===browser).length <= 0) throw new Error(`Browser option must be one of: 'chrome', 'firefox', 'internet explorer', or 'opera'!`);
+        this.driver = new Builder().forBrowser(browser).build();
+        this.browser = browser;
         this.driver.get('https://google.com/teapot');
         this.driver.wait(until.titleIs(`Error 418 (I’m a teapot)!?`));
         this.driver.wait(until.elementLocated({ id: 'teabot' }));
@@ -42,6 +51,22 @@ class TeapotTools {
     */
     unpour(){
         return this.driver.executeScript(`arguments[0].setAttribute('class', '')`, this.teapot);
+    }
+
+    /**
+     * Reset the teapot.
+     */
+    reset(){
+        this.driver.executeScript(`arguments[0].setAttribute('style', 'transform: rotate(0deg);')`, this.teapot);
+        this.driver.executeScript(`arguments[0].setAttribute('class', '')`, this.teapot);
+    }
+
+    /**
+     * Closes the active browser.
+     * @returns {Promise} any
+     */
+    close(){
+        return this.driver.close();
     }
 }
 
