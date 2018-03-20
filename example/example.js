@@ -1,6 +1,6 @@
 let TeapotTools = require('../index');
 
-let tt = new TeapotTools();
+let tt = new TeapotTools('firefox');
 
 console.log('Pouring');
 tt.pour()
@@ -8,7 +8,7 @@ tt.pour()
         console.log('Rotating');
         tt.rotate(180)
             .then(() => {
-                console.log('Unpouring')
+                console.log('Unpouring');
                 tt.unpour();
             });
     })
